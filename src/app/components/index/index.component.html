@@ -1,0 +1,36 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  <title>Mobix</title>
+</head>
+
+<div class="mx-auto" style="width: 600px; background-color: white; margin-top:20px;">
+  <div class="container" style="display:inline-block;">
+    <div style="width: 300px; height:auto; display: grid; float: right; margin-top: 30px;">
+        <h1 style="font-size: 80px; text-align: center;font-family: Helvetica; color: palevioletred; height:90px;">MOBIX</h1>
+        <h1 style="font-size: 80px; text-align: center; font-family: Helvetica; color: palevioletred; height: 90px;">SHOP</h1>
+    </div>
+
+    <img src="../assets/LogoPink.png" alt="logo" style="width:250px;height:250px;" />
+  </div>
+</div>
+<div id="search" class="mx-auto" style="width: 904px; margin-top:40px; margin-bottom: 60px;">
+  <form class="form-inline" asp-action="PrikazProizvoda" asp-controller="Home">
+    <input id="searchbar" style="width:818px; height:35px; border-radius: 20px; margin-right: 5px; padding-left: 20px; border-color:palevioletred" placeholder="Search" />
+    <button style="background-color:palevioletred; color: white; height: 35px; width: 80px; border-radius: 10px; border: 0;" type="submit">Search</button>
+  </form>
+</div>
+
+<app-carousel></app-carousel>
+
+
+<!--<app-catalog [filterProizvod] = "filterProizvod"></app-catalog>-->
+<!-- This is the carousel -->
+<!-- <app-carousel [images]="images" >
+</app-carousel> -->

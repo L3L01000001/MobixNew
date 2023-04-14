@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Mobix-Frontend';
+  isEnglish:boolean=true;
+  isBosnian:any;
+
+  title = 'Mobix';
+  bosnianFooter: any;
+
 }
