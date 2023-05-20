@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { ConfigService } from 'src/app/config/config.service';
@@ -11,7 +11,8 @@ import { NgSimpleCarouselModule } from 'ng-simple-carousel/lib/carousel.module';
   styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit {
-  filterProizvod: string = '';
+  filterProizvod:string = '';
+  proizvodi: any = null;
   constructor(private httpClient: HttpClient, private router: Router){}
 
   testirajWebApi(): void {
@@ -20,5 +21,19 @@ export class IndexComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
+  search(): void {
+    if (this.filterProizvod !== '') {
+      this.httpClient.get<any[]>("https://localhost:7278/Search?proizvodSearch=" + this.filterProizvod)
+        .subscribe((x: any[]) => {
+          this.proizvodi = x;
+          this.router.navigate(['/catalog']);
+        });
+    } else {
+      this.router.navigate(['/catalog']);
+    }
+  } 
 }
+
+  
+

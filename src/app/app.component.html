@@ -27,39 +27,37 @@
 
     <div *ngIf="isEnglish===true; else isBosnian" class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
+        <li [ngClass]="{'active': activeRoute === '/'}" class="nav-item">
           <a class="nav-link" routerLink="/">
             Home
           </a>
         </li>
-        <li class="nav-item">
+        <li [ngClass]="{'active': activeRoute === '/about'}" class="nav-item">
           <a class="nav-link" routerLink="/about">About</a>
         </li>
-        <li class="nav-item">
+        <li [ngClass]="{'active': activeRoute === '/cart'}" class="nav-item">
           <a class="nav-link" routerLink="/cart">Cart</a>
         </li>
-        <li class="nav-item">
-
+        <li [ngClass]="{'active': activeRoute === '/catalog'}" class="nav-item">
           <a class="nav-link" routerLink="/catalog">Catalog</a>
-
         </li>
-        <li class="nav-item">
+        <li [ngClass]="{'active': activeRoute === '/contact'}" class="nav-item">
           <a class="nav-link" routerLink="/contact">Contact</a>
         </li>
 
 
-        <li class="nav-item">
+        <li [ngClass]="{'active': activeRoute === '/login'}" class="nav-item">
           <a class="nav-link" routerLink="/login">Login</a>
         </li>
-        <li class="nav-item">
+        <li [ngClass]="{'active': activeRoute === '/about'}" class="nav-item">
           <a class="nav-link" routerLink="/about">Register</a>
         </li>
 
 
-        <li class="nav-item">
+        <li [ngClass]="{'active': activeRoute === '/indexBa'}" class="nav-item">
           <a class="nav-link" routerLink="/indexBa" (click)="isEnglish=false">BA</a>
         </li>
-        <li class="nav-item">
+        <li [ngClass]="{'active': activeRoute === '/index'}" class="nav-item">
           <a class="nav-link" routerLink="/index" (click)="isEnglish=true">ENG</a>
         </li>
       </ul>
@@ -69,39 +67,37 @@
     <ng-template #isBosnian>
     <div class="collapse navbar-collapse" id="navbarResponsive1">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
+        <li [ngClass]="{'active': activeRoute === '/indexBa'}" class="nav-item">
           <a class="nav-link" routerLink="/indexBa">
             Početna
           </a>
         </li>
-        <li class="nav-item">
+        <li [ngClass]="{'active': activeRoute === '/aboutBa'}" class="nav-item">
           <a class="nav-link" routerLink="/aboutBa">O nama</a>
         </li>
-        <li class="nav-item">
+        <li [ngClass]="{'active': activeRoute === '/cartBa'}" class="nav-item">
           <a class="nav-link" routerLink="/cartBa">Korpa</a>
         </li>
-        <li class="nav-item">
-
+        <li [ngClass]="{'active': activeRoute === '/catalogBa'}" class="nav-item">
           <a class="nav-link" routerLink="/catalogBa">Ponuda</a>
-
         </li>
-        <li class="nav-item">
+        <li [ngClass]="{'active': activeRoute === '/contactBa'}" class="nav-item">
           <a class="nav-link" routerLink="/contactBa">Kontaktirajte nas</a>
         </li>
 
 
-        <li class="nav-item">
+        <li [ngClass]="{'active': activeRoute === '/aboutBa'}" class="nav-item">
           <a class="nav-link" routerLink="/aboutBa">Prijavite se</a>
         </li>
-        <li class="nav-item">
+        <li [ngClass]="{'active': activeRoute === '/aboutBa'}" class="nav-item">
           <a class="nav-link" routerLink="/aboutBa">Registrujte se</a>
         </li>
 
 
-        <li class="nav-item">
+        <li [ngClass]="{'active': activeRoute === '/indexBa'}" class="nav-item">
           <a class="nav-link" routerLink="/indexBa" (click)="isEnglish=false">BA</a>
         </li>
-        <li class="nav-item">
+        <li [ngClass]="{'active': activeRoute === '/index'}" class="nav-item">
           <a class="nav-link" routerLink="/index" (click)="isEnglish=true">ENG</a>
         </li>
       </ul>
@@ -111,22 +107,6 @@
     </div>
 </nav>
 
-<!--<div class="mx-auto" style="width: 600px; background-color: white; margin-top:20px;">
-  <div class="container" style="display:inline-block;">
-    <div style="width: 300px; height:auto; display: grid; float: right; margin-top: 30px;">
-        <h1 style="font-size: 80px; text-align: center;font-family: Helvetica; color: palevioletred; height:90px;">MOBIX</h1>
-        <h1 style="font-size: 80px; text-align: center; font-family: Helvetica; color: palevioletred; height: 90px;">SHOP</h1>
-    </div>
-
-    <img src="../assets/LogoPink.png" alt="logo" style="width:250px;height:250px;" />
-  </div>
-</div>
-<div id="search" class="mx-auto" style="width: 904px; margin-top:40px">
-  <form class="form-inline" asp-action="PrikazProizvoda" asp-controller="Home">
-    <input id="searchbar" style="width:818px; height:35px; border-radius: 20px; margin-right: 5px; padding-left: 20px; border-color:palevioletred" placeholder="Search" />
-    <button style="background-color:palevioletred; color: white; height: 35px; width: 80px; border-radius: 10px; border: 0;" type="submit">Search</button>
-  </form>
-</div> -->
 
 <router-outlet></router-outlet>
 
@@ -140,7 +120,7 @@
     <div class="row">
       <div class="col-sm-12 col-md-6">
         <h6>About</h6>
-        <p class="text-justify">Visit us at ...</p>
+        <p class="text-justify">Visit us at FIT Mostar</p>
       </div>
 
       <div class="col-xs-6 col-md-3">
@@ -169,8 +149,7 @@
     <div class="row">
       <div class="col-md-8 col-sm-6 col-xs-12">
         <p class="copyright-text">
-          Mobix online shop 2023
-          <a routerLink="/index">Home</a>
+           <a style="color: white" routerLink="/">Mobix online shop 2023</a>
         </p>
       </div>
 
@@ -191,13 +170,13 @@
     <div class="row">
       <div class="col-sm-12 col-md-6">
         <h6>O nama</h6>
-        <p class="text-justify">Posjetite nas ...</p>
+        <p class="text-justify">Posjetite nas na FIT Mostar</p>
       </div>
 
       <div class="col-xs-6 col-md-3">
         <h6>Kategorije</h6>
         <ul class="footer-links">
-          <li><a routerLink="/catalog">Iphone</a></li>
+          <li><a routerLink="/catalog">iPhone</a></li>
           <li><a routerLink="/catalog">Samsung</a></li>
           <li><a routerLink="/catalog">Huawei</a></li>
           <li><a routerLink="/catalog">Redmi</a></li>
@@ -220,8 +199,7 @@
     <div class="row">
       <div class="col-md-8 col-sm-6 col-xs-12">
         <p class="copyright-text">
-          Mobix online shop 2023
-          <a routerLink="/index">Glavna stranica</a>
+          <a style="color: white" routerLink="/">Mobix online shop 2023</a>
         </p>
       </div>
 

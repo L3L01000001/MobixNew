@@ -7,7 +7,7 @@ import { catchError, retry } from 'rxjs/operators';
     providedIn: 'root'
 })
 export class ConfigService {
-  apiUrl = 'http://localhost:7278';
+  apiUrl = 'https://localhost:7278';
   constructor(private http: HttpClient) { }
 
   httpOptions = {

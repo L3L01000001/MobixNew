@@ -22,8 +22,8 @@
 </div>
 <div id="search" class="mx-auto" style="width: 904px; margin-top:40px; margin-bottom: 60px;">
   <form class="form-inline" asp-action="PrikazProizvoda" asp-controller="Home">
-    <input id="searchbar" style="width:818px; height:35px; border-radius: 20px; margin-right: 5px; padding-left: 20px; border-color:palevioletred" placeholder="Search" />
-    <button style="background-color:palevioletred; color: white; height: 35px; width: 80px; border-radius: 10px; border: 0;" type="submit">Search</button>
+    <input [(ngModel)]="filterProizvod" id="searchbar" style="width:818px; height:35px; border-radius: 20px; margin-right: 5px; padding-left: 20px; border-color:palevioletred" type="search" placeholder="Search" aria-label="Search" name="q">
+      <button type="button" style="background-color:palevioletred; color: white; height: 35px; width: 80px; border-radius: 10px; border: 0;" (click)="search()">Search</button>
   </form>
 </div>
 

@@ -6,6 +6,7 @@ import { AboutComponent } from './components/about/about.component';
 import { SampleComponent } from './components/carousel/carousel.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
+import { CatalogComponent } from './components/catalog/catalog.component';
 
 const routes: Routes = [
   {
@@ -23,6 +24,10 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'catalog',
+    component: CatalogComponent
   }
 ];
 

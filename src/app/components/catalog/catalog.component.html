@@ -1,0 +1,60 @@
+<div class="mx-auto" style="width: 600px; background-color: white; margin-top:20px;">
+    <div class="container" style="display:inline-block;">
+      <div style="width: 300px; height:auto; display: grid; float: right; margin-top: 30px;">
+          <h1 style="font-size: 80px; text-align: center;font-family: Helvetica; color: palevioletred; height:90px;">MOBIX</h1>
+          <h1 style="font-size: 80px; text-align: center; font-family: Helvetica; color: palevioletred; height: 90px;">SHOP</h1>
+      </div>
+  
+      <img src="../assets/LogoPink.png" alt="logo" style="width:250px;height:250px;" />
+    </div>
+  </div>
+  <div id="search" class="mx-auto" style="width: 904px; margin-top:40px">
+    <!-- <form class="form-inline" asp-action="PrikazProizvoda" asp-controller="Home"> -->
+      <input [(ngModel)]="filterProizvod" id="searchbar" style="width:818px; height:35px; border-radius: 20px; margin-right: 5px; padding-left: 20px; border-color:palevioletred" type="search" placeholder="Search" aria-label="Search" name="q">
+      <button type="button" style="background-color:palevioletred; color: white; height: 35px; width: 80px; border-radius: 10px; border: 0;" (click)="search()">Search</button>
+    <!-- </form> -->
+  </div>
+  <div class="container-fluid" style="margin-top:60px;">
+    <div class="col-auto mb-3" style="display:flex; gap: 70px;">
+      <div *ngFor="let p of proizvodi" class="card" style="width: 18rem;border-color: palevioletred;border-width: 3px;">
+          <div class="card-body">
+              <img src="{{p.slikaProizvoda}}" class="card-img-top" alt="...">
+              <h5 class="card-title" style="color:palevioletred; font-family: Helvetica; font-size: 17px; text-align:center; margin-top:10px;"><a routerLink="/about" style="color:palevioletred; font-family: Helvetica; font-size: 17px; text-align:center; margin-top:10px;">{{p.naziv}}</a></h5>
+              <a routerLink="/cart" class=" btn" style="margin-right: 10px;text-align:center; background-color:rgb(216, 112, 147); color: white; height: 35px; width: 100px; border-radius: 7px; border: 0; padding: 5px;">Add to Cart</a>
+              <a routerLink="/about" class="btn card-link" style="margin-right: 10px;text-align:center; background-color:palevioletred; color: white; height: 35px; width: 100px; border-radius: 7px; border: 0; padding: 5px;">Read More</a>
+           <hr>
+  
+          </div>
+      </div>
+  </div>
+    <!-- <div style="border:2px solid palevioletred; width: 250px;">
+  
+      <img src="../assets/mali-samsung.jpg" width="240" height="240" /><br>
+      <h5 style="font-family:Helvetica; font-size:17px;">Samsung Universe - 300KM</h5><br>
+      <a routerLink="/prikaz-proizvoda" style="border:2px solid black">Specifications</a>
+      <a routerLink="/detalji-proizvoda" style="border:2px solid black">More Specifications</a>
+      <a routerLink="/cart"  style="border: 2px solid black; cursor: pointer;">Add to cart</a>
+  
+    </div>
+    <br />
+    <div style="border:2px solid black">
+  
+      <h5>Samsung Galaxy - 1900KM</h5><br>
+      <img src="../assets/veliki-samsung.jpeg" width="200" height="200" />
+      <a routerLink="/prikaz-proizvoda" style="border:2px solid black">Specifications</a>
+      <a routerLink="/detalji-proizvoda" style="border:2px solid black">More Specifications</a>
+      <a routerLink="/cart"  style="border: 2px solid black; cursor: pointer;">Add to cart</a>
+  
+    </div>
+    <br />
+    <div style="border:2px solid black">
+  
+      <h5>Iphone 6S - 1600KM</h5><br>
+      <img src="../assets/iphone6s.png" width="200" height="200" />
+      <a routerLink="/prikaz-proizvoda" style="border:2px solid black">Specifications</a>
+      <a routerLink="/detalji-proizvoda" style="border:2px solid black">More Specifications</a>
+      <a routerLink="/cart" style="border: 2px solid black; cursor: pointer;">Add to cart</a>
+  
+    </div> -->
+  </div>
+  

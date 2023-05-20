@@ -10,6 +10,8 @@ import { IndexComponent } from './components/index/index.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContactComponent } from './components/contact/contact.component';
 import { LoginComponent } from './components/login/login.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CatalogComponent } from './components/catalog/catalog.component';
 
 
 @NgModule({
@@ -19,14 +21,17 @@ import { LoginComponent } from './components/login/login.component';
     AboutComponent,
     SampleComponent,
     ContactComponent,
-    LoginComponent
+    LoginComponent,
+    CatalogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgSimpleCarouselModule
+    NgSimpleCarouselModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,16 +15,14 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [ 
-    IndexComponent,
-    SampleComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,
-    NgSimpleCarouselModule, SampleComponent, CommonModule,
+    NgSimpleCarouselModule, CommonModule,
     RouterModule.forChild(routes)
   ],
   exports:[
-    IndexComponent,
+    
     RouterModule
   ],
   bootstrap: [  ]
